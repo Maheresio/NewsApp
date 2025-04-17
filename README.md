@@ -17,7 +17,7 @@
   <img src="6.png" width="200" />
 </p>
 
-## 🚀 Project Overview
+##  Project Overview
 
 NewsApp is a modern news application built with Flutter. It provides breaking news, recommendations, and discoverable news from around the world. The app features a clean and responsive user interface, real-time API integration, and a bookmarking system to save your favorite articles.
 

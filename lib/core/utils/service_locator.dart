@@ -7,17 +7,7 @@ import 'api_service.dart';
 final getIt = GetIt.instance;
 
 void serviceLocator() {
-  getIt.registerSingleton<Dio>(
-    Dio(),
-  );
-  getIt.registerSingleton<ApiService>(
-    ApiService(
-      getIt.get<Dio>(),
-    ),
-  );
-  getIt.registerSingleton<NewsRepoImpl>(
-    NewsRepoImpl(
-      getIt.get<ApiService>(),
-    ),
-  );
+  getIt.registerLazySingleton<Dio>(() => Dio());
+  getIt.registerLazySingleton<ApiService>(() => ApiService(getIt<Dio>()));
+  getIt.registerSingleton<NewsRepoImpl>(NewsRepoImpl(getIt<ApiService>()));
 }

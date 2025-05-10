@@ -25,37 +25,36 @@ abstract class AppRouter {
         builder: (context, state) {
           return const BottomNavBar();
         },
-        pageBuilder: (context, state) => buildPageWithDefaultTransition<void>(
-          context: context,
-          state: state,
-          child: const BottomNavBar(),
-        ),
+        pageBuilder:
+            (context, state) => buildPageWithDefaultTransition<void>(
+              context: context,
+              state: state,
+              child: const BottomNavBar(),
+            ),
       ),
       GoRoute(
         path: kNewsDetailsView,
         builder: (context, state) {
-          return NewsDetailsView(
-            newsItem: state.extra as NewsModel,
-          );
+          return NewsDetailsView(newsItem: state.extra as NewsModel);
         },
-        pageBuilder: (context, state) => buildPageWithDefaultTransition<void>(
-          context: context,
-          state: state,
-          child: NewsDetailsView(
-            newsItem: state.extra as NewsModel,
-          ),
-        ),
+        pageBuilder:
+            (context, state) => buildPageWithDefaultTransition<void>(
+              context: context,
+              state: state,
+              child: NewsDetailsView(newsItem: state.extra as NewsModel),
+            ),
       ),
       GoRoute(
         path: kViewAllView,
         builder: (context, state) {
           return ViewAllView(listType: state.extra as String);
         },
-        pageBuilder: (context, state) => buildPageWithDefaultTransition<void>(
-          context: context,
-          state: state,
-          child: ViewAllView(listType: state.extra as String),
-        ),
+        pageBuilder:
+            (context, state) => buildPageWithDefaultTransition<void>(
+              context: context,
+              state: state,
+              child: ViewAllView(listType: state.extra as String),
+            ),
       ),
     ],
   );

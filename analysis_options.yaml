@@ -16,7 +16,7 @@ dart_code_metrics:
     lines-of-executable-code: 50
     number-of-parameters: 4
     maximum-nesting-level: 5
-  metrics-exclude:
+  metrics-exclude:   
     - test/**
   rules:
     - newline-before-return

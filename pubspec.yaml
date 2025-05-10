@@ -19,6 +19,7 @@ dependencies:
   flutter:
     sdk: flutter
   flutter_bloc: ^9.1.0
+  flutter_dotenv: ^5.2.1
   flutter_screenutil: ^5.7.0
   font_awesome_flutter: ^10.8.0
   get_it: ^8.0.3
@@ -45,3 +46,4 @@ flutter:
   uses-material-design: true
   assets:
     - assets/
+    - .env
